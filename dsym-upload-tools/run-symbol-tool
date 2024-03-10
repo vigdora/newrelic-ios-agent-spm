@@ -23,7 +23,7 @@ SCRIPT="$WORK_DIRECTORY/run-symbol-tool.swift"
 # /usr/bin/xcrun --sdk macosx swift "$SCRIPT" $API_KEY $DEBUG_FLAG
 
 echo "New Relic: Current working directory: $(pwd)"
-/usr/bin/xcrun --sdk macosx swift "$SCRIPT" $API_KEY $DEBUG_FLAG > upload_dsym_results.log 2>&1 & || echo "Script failed with exit code $?" >> upload_dsym_results.log &
+/usr/bin/xcrun --sdk macosx swift "$SCRIPT" $API_KEY $DEBUG_FLAG > upload_dsym_results.log 2>&1 &
 echo "New Relic: finished Script : $(pwd)"
 
 
